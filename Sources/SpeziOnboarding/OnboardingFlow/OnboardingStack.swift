@@ -45,6 +45,7 @@ public struct OnboardingStack: View {
     @ObservedObject var onboardingFlowViewCollection: _OnboardingFlowViewCollection
 
 
+    /*
     var binding: Binding<NavigationPath> {
         Binding(get: {
             print("Stack retrieves value")
@@ -53,20 +54,24 @@ public struct OnboardingStack: View {
             print("Going to set navigation path to \(newValue)")
             onboardingNavigationPath.path = newValue
         }
-    }
+    }*/
 
     /// The ``OnboardingStack/body`` contains a SwiftUI `NavigationStack` that is responsible for the navigation between the different onboarding views via a ``OnboardingNavigationPath``
     public var body: some View {
-        NavigationStack(path: binding) {
-            onboardingNavigationPath.firstOnboardingView
-                .navigationDestination(for: OnboardingStepIdentifier.self) { onboardingStep in
-                    let ps = print("Displaying destination for \(onboardingStep); path is now \(onboardingNavigationPath.path)")
+        NavigationStack(path: $onboardingNavigationPath.path) {
+            NavigationStack {
+                onboardingNavigationPath.firstOnboardingView
+            }
+            .navigationDestination(for: OnboardingStepIdentifier.self) { onboardingStep in
+                let ps = print("Displaying destination for \(onboardingStep); path is now \(onboardingNavigationPath.path)")
+                ZStack {
                     onboardingNavigationPath.navigate(to: onboardingStep)
                 }
+            }
         }
-        .onReceive(onboardingNavigationPath.$path, perform: { path in
-            print("Received new path: \(path)")
-        })
+        //.onReceive(onboardingNavigationPath.$path, perform: { path in
+        //    print("Received new path: \(path)")
+        //})
         .environmentObject(onboardingNavigationPath)
         /// Inject onboarding views resulting from a re-triggered evaluation of the onboarding result builder into the `OnboardingNavigationPath`
         .onReceive(onboardingFlowViewCollection.$views, perform: { updatedOnboardingViews in

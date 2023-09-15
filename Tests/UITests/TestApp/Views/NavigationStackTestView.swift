@@ -14,12 +14,10 @@ import SwiftUI
 struct NavigationStackTestView: View {
     @EnvironmentObject private var path: OnboardingNavigationPath
 
-    @State var paths = NavigationPath()
-
 
     var body: some View {
-        let stack = NavigationStack(path: $paths) {
-            VStack(spacing: 12) {
+        let stack = NavigationStack {
+            //VStack(spacing: 12) {
                 Text("NavigationStack Test View")
 
                 Button {
@@ -27,7 +25,7 @@ struct NavigationStackTestView: View {
                 } label: {
                     Text("Next")
                 }
-            }
+            // }
         }
 
         mirror(stack: stack)
@@ -36,7 +34,7 @@ struct NavigationStackTestView: View {
 
     func mirror<Stack: View>(stack: Stack) -> EmptyView {
         for (label, child) in Mirror(reflecting: stack).children {
-            print("NS: \(label): \(child)")
+            // TODO print("NS: \(label): \(child)")
         }
         return EmptyView()
     }
