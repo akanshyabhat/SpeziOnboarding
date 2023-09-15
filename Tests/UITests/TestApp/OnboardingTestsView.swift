@@ -23,6 +23,7 @@ struct OnboardingTestsView: View {
             )
             OnboardingWelcomeTestView()
             SequentialOnboardingTestView()
+            NavigationStackTestView()
             ConsentMarkdownTestView()
             ConsentHTMLTestView()
             

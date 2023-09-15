@@ -110,7 +110,7 @@ public struct OnboardingActionsView: View {
         primaryText: PrimaryText,
         primaryAction: @escaping () async throws -> Void,
         secondaryText: SecondaryText,
-        secondaryAction: (@escaping () async throws -> Void)
+        secondaryAction: @escaping () async throws -> Void
     ) {
         self.primaryText = String(primaryText)
         self.primaryAction = primaryAction

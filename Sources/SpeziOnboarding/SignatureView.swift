@@ -76,7 +76,7 @@ public struct SignatureView: View {
     /// - Parameters:
     ///   - signature: A `Binding` containing the current signature as an `PKDrawing`.
     ///   - isSigning: A `Binding` indicating if the user is currently signing.
-    ///   - name: The name that is deplayed under the signature line.
+    ///   - name: The name that is displayed under the signature line.
     ///   - lineOffset: Defines the distance of the signature line from the bottom of the view. The default value is 30.
     init(
         signature: Binding<PKDrawing> = .constant(PKDrawing()),

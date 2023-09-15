@@ -23,6 +23,7 @@
 		97A8FF2C2A74449F008CD91A /* OnboardingCustomTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A8FF2B2A74449F008CD91A /* OnboardingCustomTestView1.swift */; };
 		97A8FF2E2A7444FC008CD91A /* OnboardingCustomTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A8FF2D2A7444FC008CD91A /* OnboardingCustomTestView2.swift */; };
 		97A8FF312A74607F008CD91A /* CustomToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A8FF302A74607F008CD91A /* CustomToggleView.swift */; };
+		A98893942AB451A5006D9661 /* NavigationStackTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98893932AB451A5006D9661 /* NavigationStackTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		97A8FF2B2A74449F008CD91A /* OnboardingCustomTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCustomTestView1.swift; sourceTree = "<group>"; };
 		97A8FF2D2A7444FC008CD91A /* OnboardingCustomTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCustomTestView2.swift; sourceTree = "<group>"; };
 		97A8FF302A74607F008CD91A /* CustomToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggleView.swift; sourceTree = "<group>"; };
+		A98893932AB451A5006D9661 /* NavigationStackTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				97A8FF2B2A74449F008CD91A /* OnboardingCustomTestView1.swift */,
 				97A8FF2D2A7444FC008CD91A /* OnboardingCustomTestView2.swift */,
 				970D44542A6F119600756FE2 /* OnboardingConditionalTestView.swift */,
+				A98893932AB451A5006D9661 /* NavigationStackTestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				970D44552A6F119600756FE2 /* OnboardingConditionalTestView.swift in Sources */,
+				A98893942AB451A5006D9661 /* NavigationStackTestView.swift in Sources */,
 				970D44532A6F0B1900756FE2 /* OnboardingStartTestView.swift in Sources */,
 				970D44512A6F04ED00756FE2 /* SequentialOnboardingTestView.swift in Sources */,
 				97A8FF2C2A74449F008CD91A /* OnboardingCustomTestView1.swift in Sources */,
